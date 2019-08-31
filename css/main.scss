@@ -1,0 +1,38 @@
+@mixin pigs {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 2s ease-in-out;
+    -webkit-transition: 2s ease-in-out;
+}
+
+.all-pigs {
+    position: relative;
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    .pig1 {
+        background-image: url(../img/pig1.jpg);
+        @include pigs;
+    }
+    .pig2 {
+        background-image: url(../img/pig2.jpg);
+        @include pigs;
+    }
+    .pig3 {
+        background-image: url(../img/pig3.jpg);
+        @include pigs;
+    }
+}
+
+.pig.appear {
+    opacity: 1;
+    transition: 2s ease-in-out;
+    -webkit-transition: 2s ease-in-out;
+}
